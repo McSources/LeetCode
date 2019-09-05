@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.no7easy;
 
 /**
  * 7. 整数反转
@@ -26,18 +26,13 @@ package leetcode;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author machao
  */
-public class No7Easy {
-    public static void main(String[] args) {
-        System.out.println(reverse2(-65786));
-        System.out.println(reverse(-65786));
-    }
-
+public class Solution {
     /**
      * 比较低级的用翻转字符串的方式实现
      * @param x 要被翻转的数字
      * @return 被反转的数字
      */
-    private static int reverse(int x) {
+    public int reverse(int x) {
         StringBuilder numb = new StringBuilder(String.valueOf(x));
         numb = numb.reverse();
         String numbStr;
@@ -61,7 +56,7 @@ public class No7Easy {
      * @param x 要被翻转的数字
      * @return 被反转的数字
      */
-    private static int reverse2(int x){
+    public int reverse2(int x){
         int ans = 0;
         while (x != 0) {
             int pop = x % 10;

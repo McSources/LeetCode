@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.no905easy;
 
 import java.util.Arrays;
 
@@ -27,11 +27,8 @@ import java.util.Arrays;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author machao
  */
-public class No905Easy {
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(sortArrayByParity(new int[]{5, 3, 6, 7, 6, 734, 74, 1, 3})));
-    }
-    private static int[] sortArrayByParity(int[] A) {
+public class Solution {
+    public int[] sortArrayByParity(int[] A) {
         int head = 0;
         int tail = A.length - 1;
         int[] B = new int[A.length];
