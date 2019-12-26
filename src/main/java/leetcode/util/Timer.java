@@ -5,8 +5,8 @@ package leetcode.util;
  * @date 2019/12/26
  */
 public class Timer {
-    private long startTime;
-    private long endTime;
+    private volatile long startTime;
+    private volatile long endTime;
 
     public void start() {
         startTime = System.currentTimeMillis();
@@ -14,6 +14,7 @@ public class Timer {
 
     public void end() {
         endTime = System.currentTimeMillis();
+        System.err.println(endTime - startTime);
     }
 
     public long duration() {

@@ -19,7 +19,7 @@ package leetcode.no2medium;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author machao
  */
-public class Solution {
+class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if(l1 == null && l2 == null){
             return null;

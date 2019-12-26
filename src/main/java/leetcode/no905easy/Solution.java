@@ -27,7 +27,7 @@ import java.util.Arrays;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author machao
  */
-public class Solution {
+class Solution {
     public int[] sortArrayByParity(int[] A) {
         int head = 0;
         int tail = A.length - 1;

@@ -19,5 +19,19 @@ package leetcode.no1easy;
  * @author machao
  * @date 2019/12/26
  */
-public class Solution {
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] ret = new int[2];
+        loop1:
+        while (ret[0] < nums.length - 1){
+            for(int i = ret[0]+1;i<nums.length;i++){
+                if(nums[ret[0]]+nums[i] == target){
+                    ret[1] = i;
+                    break loop1;
+                }
+            }
+            ret[0] += 1;
+        }
+        return ret;
+    }
 }

@@ -26,7 +26,7 @@ package leetcode.no7easy;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author machao
  */
-public class Solution {
+class Solution {
     /**
      * 比较低级的用翻转字符串的方式实现
      * @param x 要被翻转的数字

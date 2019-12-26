@@ -3,7 +3,7 @@ package leetcode.no2medium;
 import java.util.ArrayList;
 import java.util.List;
 
-public class No2Test {
+class No2Test {
 
     public static void main(String[] args) {
         Solution solution = new Solution();

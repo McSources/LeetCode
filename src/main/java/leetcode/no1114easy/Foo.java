@@ -48,7 +48,7 @@ import java.util.concurrent.CountDownLatch;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  * @author machao
  */
-public class Foo {
+class Foo {
     private CountDownLatch count2 = new CountDownLatch(1);
     private CountDownLatch count3 = new CountDownLatch(1);
     public Foo() {}

@@ -2,7 +2,7 @@ package leetcode.no1114easy;
 
 import java.util.concurrent.*;
 
-public class No1114Test {
+class No1114Test {
     public static void main(String[] args) {
         try {
             transfer(new int[]{3,2,1});
