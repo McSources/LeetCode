@@ -11,14 +11,8 @@ class No1Test {
         int target = 9;
         Timer timer = new Timer();
         timer.start();
-        int[] result = solution.twoSum3(nums,target);
+        int[] result = solution.twoSum2(nums, target);
         timer.end();
         System.out.println(Arrays.toString(result));
-//        int i = -10;
-//        while(i<=10){
-//            int j = i+1;
-//            System.out.println(i+" & "+j+" = "+(i&j));
-//            i = j;
-//        }
     }
 }

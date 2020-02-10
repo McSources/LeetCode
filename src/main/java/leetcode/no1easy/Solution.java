@@ -58,19 +58,4 @@ class Solution {
         }
         return null;
     }
-    public int[] twoSum3(int[] nums, int target) {
-        //3、投机取巧用数组,只适合部分情况
-        int number = 2048;
-        int bits   = number - 1;
-        int []result = new int[number];
-
-        for (int i = 0; i < nums.length; i++) {
-            int c = (target - nums[i]) & bits;  //解决为负数的问题，卧槽
-            if(result[c] != 0){
-                return new int[]{result[c]-1,i};
-            }
-            result[nums[i] & bits] = i+1;
-        }
-        return result;
-    }
 }
