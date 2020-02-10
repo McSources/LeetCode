@@ -1,5 +1,8 @@
 package leetcode.no1easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
  * <p>
@@ -20,12 +23,19 @@ package leetcode.no1easy;
  * @date 2019/12/26
  */
 class Solution {
+    /**
+     * 硬解法，直接遍历两遍
+     *
+     * @param nums   整数数组
+     * @param target 目标值
+     * @return 两个数的下标
+     */
     public int[] twoSum(int[] nums, int target) {
         int[] ret = new int[2];
         loop1:
-        while (ret[0] < nums.length - 1){
-            for(int i = ret[0]+1;i<nums.length;i++){
-                if(nums[ret[0]]+nums[i] == target){
+        while (ret[0] < nums.length - 1) {
+            for (int i = ret[0] + 1; i < nums.length; i++) {
+                if (nums[ret[0]] + nums[i] == target) {
                     ret[1] = i;
                     break loop1;
                 }
@@ -33,5 +43,34 @@ class Solution {
             ret[0] += 1;
         }
         return ret;
+    }
+
+    /**
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int[] twoSum2(int[] nums, int target) {
+        Map<Integer,Integer> numsMap = new HashMap<>();
+        for(int i = 0;i<nums.length;i++){
+            numsMap.put(i,nums[i]);
+        }
+        return null;
+    }
+    public int[] twoSum3(int[] nums, int target) {
+        //3、投机取巧用数组,只适合部分情况
+        int number = 2048;
+        int bits   = number - 1;
+        int []result = new int[number];
+
+        for (int i = 0; i < nums.length; i++) {
+            int c = (target - nums[i]) & bits;  //解决为负数的问题，卧槽
+            if(result[c] != 0){
+                return new int[]{result[c]-1,i};
+            }
+            result[nums[i] & bits] = i+1;
+        }
+        return result;
     }
 }
